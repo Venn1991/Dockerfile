@@ -1,0 +1,9 @@
+1) The ONBUILD instruction adds to the image a trigger instructions to be executed   at a later time, when the image is used as the base for another build.
+2) it basically sets a trigger instruction that will not be executed when the image is build, however, it is going to be excuted when a child images is build
+
+3)This is usefull when you have two images: the first one is the set of base that
+just installs the packages and prepares the necessary environment while the secondis based on it, provides the actual implementation of the application 
+
+4) The ONBUILD instruction accepts the following Dockerfile instructions as triggers:
+ADD, COPY, ENV, USER, WORKDIR, VOLUMES,STOPSIGNAL
+
