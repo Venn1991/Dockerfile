@@ -7,3 +7,12 @@ just installs the packages and prepares the necessary environment while the seco
 4) The ONBUILD instruction accepts the following Dockerfile instructions as triggers:
 ADD, COPY, ENV, USER, WORKDIR, VOLUMES,STOPSIGNAL
 
+EXAMPLE
+FROM busybox
+ONBUILD RUN echo "this is madhu"
+--------------------
+docker build -t image1 
+docker run -it --name msghello
+------------------------------
+FROM image
+-----------------------
